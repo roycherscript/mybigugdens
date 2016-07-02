@@ -1,0 +1,114 @@
+<html>
+ <head>
+  
+  <title>Undergraduate Studies in Engineering - India Focus</title>
+
+  <script type ="text/javascript" src="cookie1.js"></script>
+  <script type ="text/javascript">
+   var userName;
+
+   function resizeme() {
+        
+       document.getElementById("normalImg").style.height = (document.body.clientHeight - 100) * 0.9;
+      
+       }
+
+      
+ 
+    function greet() {
+  
+     if (navigator.cookieEnabled)
+       userName = readCookie ("acad_username");
+     if (userName) {
+       alert("Hello " + userName + ", I missed you.");
+     document.getElementById("normalImg").src ="EngHappy.jpg";
+      }
+     else {
+      alert ('Hello, welcome to the world of academics.');
+    }
+    
+    }
+
+   function touchMe () {
+    if (userName) {
+     alert ("I like the attention, " + userName + ". Thank you.");
+
+    }
+   else {
+     userName = prompt("What is your name?", "Enter your name here.");
+      if (userName) {
+        alert("It is great meeting you, " +userName + ".");
+
+       
+        if(navigator.cookieEnabled) {
+          
+           writeCookie("acad_username", userName, 5 * 356);
+         }
+        else {
+          alert ("Sorry. Cookies are'nt supported/enabled in your browser. I won't remember you later.");
+         }
+        
+         }
+       
+      }
+     document.getElementById("normalImg").src ="EngHappy.jpg";
+
+     setTimeout("document.getElementById('normalImg').src = 'EngSad.jpg';",1*60*1000);
+    }
+   
+  </script>
+  
+  <style type = "text/css">
+        body  {
+                        background-color: #d2b48c;
+                        margin-left: 20%;
+                        margin-right: 20%;
+                        border: 2px dotted black;
+                        padding: 10px 10 px 10px 10px;
+                        font-family: sans-serif;
+                  }
+  </style>
+  
+
+  </head>
+
+  <body onload ="resizeme(); greet();"
+     onresize="resizeme();">
+
+          
+    <h1> My Focus on Undergraduate Studies in Engineering in India</h1>
+
+    <blockquote>
+    <em>There are 3 types of students:</em> <br>
+    <em>1. Some</em><br>
+    <em>make wonders happen</em> <br>
+    <em>2. Some</em><br>
+    <em>watch wonders happen</em><br>
+    <em>3. Some</em> <br>
+    <em>wonder what happened?</em><br>
+    </blockquote>
+
+    <div style ="margin-top:100px; text-align:center">   
+      <img id="normalImg" src="EngNormal.jpg" alt="iSmiley" style="cursor:pointer" 
+       onclick="touchMe ();"/>
+    </div>     
+     
+       
+    <p>The central spot for data related to colleges for undergradute engineering studies in India</p>
+ 
+  
+   <h2> List of Colleges </h2>
+
+   <h3> Vellore Institute of Technology, Vellore </h3>
+   <p> <em>Explore engineering opportunities with </em><a href="http://www.vit.ac.in/"> VIT </a> </p>
+
+   <h3> Subramania Shiv Nadar College of Engineering, Chennai </h3>
+   <p> <em> Explore learning in engineering with </em> <a href="http://www.ssn.edu.in/?page_id=124"> SSN </a> </p>
+
+   <h3> Birla Institute of Technology and Science, Pilani </h3>
+   <p> <em> Enjoy learning engineering with </em> <a href="http://www.bits-pilani.ac.in/"> BITS Pilani </a> </p>
+
+  
+ </body>
+
+</html>
