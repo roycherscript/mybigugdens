@@ -1,2 +1,2 @@
 # mybigugdens
-Big places to study UG in India
+Information on career paths for students
